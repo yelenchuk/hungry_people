@@ -5,6 +5,7 @@ export class Slider {
     constructor(sliderSelector = "") {
         this.sliderSelector = sliderSelector;
         this.init();
+        this.createSlider();
     }
 
     init() {
@@ -63,7 +64,7 @@ export class Slider {
             textDescription.append(textDesc);
         })
 
-
+        this.addDots(sliderData.length);
 
         return slides;
 
@@ -71,7 +72,6 @@ export class Slider {
 
     render() {
         this.slider.append(this.slides);
-
     }
 
 
@@ -91,12 +91,12 @@ export class Slider {
     createSlider() {
 
         let sliderHiddenClass = "is-hidden";
-        let slides = document.querySelector(".specialites__slider--slides")
+        let slides = document.querySelector(".specialites__slider--slides");
         let sliderInterval = 5000;
-        let slidesCount = slides.children.length;
-        this.addDots(slidesCount);
+        let slidesCount = this.slider.children.length;
         let allDots = document.querySelector('.specialites__dots');
         let i = 0;
+        console.log(allDots.children, slidesCount);
         allDots.children[i].classList.add('active__dot');
 
         setInterval(function () {
