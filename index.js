@@ -1,3 +1,10 @@
+import { Slider } from "./slider.js";
+
+// const slider = new Slider('.specialites__slider');
+const slider2 = new Slider('.specialites__slider');
+
+
+
 // Initialize and add the google map
 function initMap() {
   // The location of Uluru
