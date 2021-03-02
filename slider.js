@@ -25,7 +25,7 @@ export class Slider {
         sliderData.forEach((slide) => {
             console.log(slide)
             const inner = document.createElement("div");
-            inner.className = "container_inner blocks-margin container_inner--pading-bottom specialites__slider-item";
+            inner.className = "container_inner blocks-margin container_inner--pading-bottom specialites__slider-item is-hidden";
             slides.append(inner);
 
             const part = document.createElement("div");
@@ -97,6 +97,7 @@ export class Slider {
         let allDots = document.querySelector('.specialites__dots');
         let i = 0;
         console.log(allDots.children, slidesCount);
+        slides.children[0].classList.remove(sliderHiddenClass);
         allDots.children[i].classList.add('active__dot');
 
         setInterval(function () {
@@ -114,3 +115,4 @@ export class Slider {
 
 
 
+6577
