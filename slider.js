@@ -23,14 +23,14 @@ export class Slider {
         slides.className = "specialites__slider--slides";
 
         sliderData.forEach((slide) => {
-            console.log(slide)
+
             const inner = document.createElement("div");
             inner.className = "container_inner blocks-margin container_inner--pading-bottom specialites__slider-item is-hidden";
             slides.append(inner);
 
             const part = document.createElement("div");
             part.className = "container_inner-part";
-            inner.append(part);
+            // inner.append(part);
 
             const imgBlock = document.createElement("div");
             imgBlock.className = slide.direction === 'left' ? "img-block after_left" : "img-block after_right";
@@ -42,7 +42,7 @@ export class Slider {
 
             const partText = document.createElement("div");
             partText.className = "container_inner-part text_center";
-            inner.append(partText);
+            // inner.append(partText);
 
             const h2 = document.createElement("h2");
             h2.className = "second_title";
@@ -62,6 +62,15 @@ export class Slider {
             textDesc.className = "section__text--description";
             textDesc.innerText = slide.text.other_text;
             textDescription.append(textDesc);
+
+            if (slide.direction === 'left') {
+                inner.append(part);
+                inner.append(partText);
+            } else {
+                inner.append(partText);
+                inner.append(part);
+            }
+
         })
 
         this.addDots(sliderData.length);
@@ -82,6 +91,11 @@ export class Slider {
         for (let i = 0; i < countDots; i++) {
             const itemDots = document.createElement("div");
             itemDots.className = "specialites__dot";
+
+            itemDots.addEventListener('click',() => {
+                itemDots.classList.add('active__dot');
+                console.log("test");
+            });
             dots.append(itemDots);
         }
 
@@ -92,11 +106,10 @@ export class Slider {
 
         let sliderHiddenClass = "is-hidden";
         let slides = document.querySelector(".specialites__slider--slides");
-        let sliderInterval = 5000;
-        let slidesCount = this.slider.children.length;
+        let sliderInterval = 3000;
         let allDots = document.querySelector('.specialites__dots');
         let i = 0;
-        console.log(allDots.children, slidesCount);
+
         slides.children[0].classList.remove(sliderHiddenClass);
         allDots.children[i].classList.add('active__dot');
 
@@ -111,8 +124,6 @@ export class Slider {
             slides.children[i].classList.remove(sliderHiddenClass);
         }, sliderInterval);
     }
+
+
 }
-
-
-
-6577
