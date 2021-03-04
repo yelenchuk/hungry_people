@@ -10,8 +10,8 @@ export class Slider {
 
     init() {
         this.render();
-
     }
+
 
     get slider() {
         return document.querySelector(this.sliderSelector);
@@ -22,11 +22,12 @@ export class Slider {
         const slides = document.createElement("div");
         slides.className = "specialites__slider--slides";
 
-        sliderData.forEach((slide) => {
+        sliderData.forEach((slide, index) => {
 
             const inner = document.createElement("div");
             inner.className = "container_inner blocks-margin container_inner--pading-bottom specialites__slider-item is-hidden";
             slides.append(inner);
+            inner.setAttribute("data-index-number", index);
 
             const part = document.createElement("div");
             part.className = "container_inner-part";
@@ -76,11 +77,12 @@ export class Slider {
         this.addDots(sliderData.length);
 
         return slides;
-
     }
 
     render() {
+        this.slider.innerText = '';
         this.slider.append(this.slides);
+
     }
 
 
@@ -89,12 +91,12 @@ export class Slider {
         dots.className = "specialites__dots";
 
         for (let i = 0; i < countDots; i++) {
+
             const itemDots = document.createElement("div");
             itemDots.className = "specialites__dot";
-
-            itemDots.addEventListener('click',() => {
+            itemDots.addEventListener('click', () => {
                 itemDots.classList.add('active__dot');
-                console.log("test");
+                this.setActiveSlider(i);
             });
             dots.append(itemDots);
         }
@@ -102,18 +104,18 @@ export class Slider {
         this.slider.append(dots);
     }
 
-    createSlider() {
-
+    createSlider(index = 0) {
         let sliderHiddenClass = "is-hidden";
         let slides = document.querySelector(".specialites__slider--slides");
-        let sliderInterval = 3000;
+        let sliderInterval = 5000;
         let allDots = document.querySelector('.specialites__dots');
-        let i = 0;
-
+        let i = index;
         slides.children[0].classList.remove(sliderHiddenClass);
         allDots.children[i].classList.add('active__dot');
 
-        setInterval(function () {
+        let interval = setInterval(myTimer, sliderInterval);
+
+        function myTimer() {
             slides.children[i].classList.add(sliderHiddenClass);
             allDots.children[i].classList.remove('active__dot');
             i++;
@@ -122,8 +124,20 @@ export class Slider {
             }
             allDots.children[i].classList.add('active__dot');
             slides.children[i].classList.remove(sliderHiddenClass);
-        }, sliderInterval);
+        }
     }
 
+    setActiveSlider(index) {
+        let slides = document.querySelector(".specialites__slider--slides");
 
+        for (let i=0; i < slides.children.length; i++) {
+            console.log(slides.children[i]);
+            if (i === index) {
+                slides.children[i].classList.remove('is-hidden');
+            } else {
+                slides.children[i].classList.add('is-hidden');
+            }
+        }
+        this.render();
+    }
 }
