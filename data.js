@@ -34,3 +34,70 @@ const sliderData = [
     }
 
 ]
+
+const menuType = ["soupe", "pizza", "pasta", "desert", "wine", "beer", "drinks"]
+
+const menuData = [
+    {
+        type: "SOUPE",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "PIZZA",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 55.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "PASTA",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "DESERT",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 45.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "WINE",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 35.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "BEER",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 25.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "DRINKS",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 15.68,
+        currency: "USD"
+    }
+
+]

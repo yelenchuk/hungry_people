@@ -4,12 +4,13 @@ export class Slider {
 
     constructor(sliderSelector = "") {
         this.sliderSelector = sliderSelector;
+        this.currentSlide = 0;
         this.init();
         this.createSlider();
     }
 
     init() {
-        this.render();
+        this.slider.append(this.slides);
     }
 
 
@@ -25,7 +26,7 @@ export class Slider {
         sliderData.forEach((slide, index) => {
 
             const inner = document.createElement("div");
-            inner.className = "container_inner blocks-margin container_inner--pading-bottom specialites__slider-item is-hidden";
+            inner.className = "container_inner blocks-margin container_inner--pading-bottom specialites__slider-item";
             slides.append(inner);
             inner.setAttribute("data-index-number", index);
 
@@ -75,14 +76,9 @@ export class Slider {
         })
 
         this.addDots(sliderData.length);
+        this.addButton();
 
         return slides;
-    }
-
-    render() {
-        this.slider.innerText = '';
-        this.slider.append(this.slides);
-
     }
 
 
@@ -94,50 +90,73 @@ export class Slider {
 
             const itemDots = document.createElement("div");
             itemDots.className = "specialites__dot";
-            itemDots.addEventListener('click', () => {
-                itemDots.classList.add('active__dot');
-                this.setActiveSlider(i);
-            });
             dots.append(itemDots);
         }
 
         this.slider.append(dots);
     }
 
-    createSlider(index = 0) {
-        let sliderHiddenClass = "is-hidden";
-        let slides = document.querySelector(".specialites__slider--slides");
-        let sliderInterval = 5000;
-        let allDots = document.querySelector('.specialites__dots');
-        let i = index;
-        slides.children[0].classList.remove(sliderHiddenClass);
-        allDots.children[i].classList.add('active__dot');
+    addButton () {
+        const slideControl = document.createElement("div");
+        slideControl.className = "specialites__control";
+        this.slider.append(slideControl);
 
-        let interval = setInterval(myTimer, sliderInterval);
+        const prevBtn = document.createElement("div");
+            prevBtn.className = 'specialites__control-left';
+        slideControl.append(prevBtn);
 
-        function myTimer() {
-            slides.children[i].classList.add(sliderHiddenClass);
-            allDots.children[i].classList.remove('active__dot');
-            i++;
-            if (i >= slides.children.length) {
-                i = 0;
-            }
-            allDots.children[i].classList.add('active__dot');
-            slides.children[i].classList.remove(sliderHiddenClass);
-        }
+        const nextBtn = document.createElement("div");
+            nextBtn.className = 'specialites__control-right';
+            slideControl.append(nextBtn);
     }
 
-    setActiveSlider(index) {
-        let slides = document.querySelector(".specialites__slider--slides");
 
-        for (let i=0; i < slides.children.length; i++) {
-            console.log(slides.children[i]);
-            if (i === index) {
-                slides.children[i].classList.remove('is-hidden');
-            } else {
-                slides.children[i].classList.add('is-hidden');
-            }
+    createSlider() {
+
+        const slides = document.querySelectorAll(".specialites__slider-item")
+        const dots = document.querySelectorAll('.specialites__dot')
+
+        const init = (numb) => {
+            slides.forEach((slide, index) => {
+                slide.classList.remove("is-active")
+                dots.forEach((dot, index) => {
+                    dot.classList.remove("active__dot")
+                })
+            })
+            slides[numb].classList.add("is-active")
+            dots[numb].classList.add("active__dot")
         }
-        this.render();
+
+
+
+
+        document.addEventListener("DOMContentLoaded", init(this.currentSlide))
+        const next = () => {
+            this.currentSlide >= slides.length - 1 ? this.currentSlide = 0 : this.currentSlide++
+            init(this.currentSlide)
+        }
+
+        const prev = () => {
+            this.currentSlide <= 0 ? this.currentSlide = slides.length - 1 : this.currentSlide--
+            init(this.currentSlide)
+        }
+
+        document.querySelector(".specialites__control-right").addEventListener('click', next)
+        document.querySelector(".specialites__control-left").addEventListener('click', prev)
+
+
+        setInterval(() => {
+            next()
+        }, 5000);
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+                console.log(this.currentSlide)
+                init(i)
+                this.currentSlide = i
+            })
+        })
+
+
     }
 }
