@@ -33,9 +33,17 @@ const sliderData = [
         }
     }
 
-]
+];
 
-const menuType = ["soupe", "pizza", "pasta", "desert", "wine", "beer", "drinks"]
+
+const menuTitle =
+    {
+        pageTitle: "delisiose menu",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna."
+    }
+;
+
+const menuType = ["soupe", "pizza", "pasta", "desert", "wine", "beer", "drinks"];
 
 const menuData = [
     {
@@ -49,7 +57,7 @@ const menuData = [
 
     {
         type: "PIZZA",
-        title: "SOUPE QUATRO STAGIONI",
+        title: "PIZZA QUATRO STAGIONI",
         description: "Integer ullamcorper neque eu purus euismod",
         price: 55.68,
         currency: "USD"
@@ -58,7 +66,7 @@ const menuData = [
 
     {
         type: "PASTA",
-        title: "SOUPE QUATRO STAGIONI",
+        title: "PASTA QUATRO STAGIONI",
         description: "Integer ullamcorper neque eu purus euismod",
         price: 75.68,
         currency: "USD"
@@ -67,7 +75,7 @@ const menuData = [
 
     {
         type: "DESERT",
-        title: "SOUPE QUATRO STAGIONI",
+        title: "DESERT QUATRO STAGIONI",
         description: "Integer ullamcorper neque eu purus euismod",
         price: 45.68,
         currency: "USD"
@@ -76,7 +84,7 @@ const menuData = [
 
     {
         type: "WINE",
-        title: "SOUPE QUATRO STAGIONI",
+        title: "WINE QUATRO STAGIONI",
         description: "Integer ullamcorper neque eu purus euismod",
         price: 35.68,
         currency: "USD"
@@ -85,7 +93,7 @@ const menuData = [
 
     {
         type: "BEER",
-        title: "SOUPE QUATRO STAGIONI",
+        title: "BEER QUATRO STAGIONI",
         description: "Integer ullamcorper neque eu purus euismod",
         price: 25.68,
         currency: "USD"
@@ -94,7 +102,7 @@ const menuData = [
 
     {
         type: "DRINKS",
-        title: "SOUPE QUATRO STAGIONI",
+        title: "DRINKS QUATRO STAGIONI",
         description: "Integer ullamcorper neque eu purus euismod",
         price: 15.68,
         currency: "USD"

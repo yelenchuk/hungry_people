@@ -1,21 +1,20 @@
 
-
 export class Slider {
 
     constructor(sliderSelector = "") {
-        this.sliderSelector = sliderSelector;
+        this.sliderSelector = sliderSelector; // св-во
         this.currentSlide = 0;
         this.init();
         this.createSlider();
     }
 
     init() {
-        this.slider.append(this.slides);
+        this.slider.append(this.slides); // инициализация добавляет наш слайдер в <div class="specialites__slider"></div>
     }
 
 
     get slider() {
-        return document.querySelector(this.sliderSelector);
+        return document.querySelector(this.sliderSelector);  // нашли <div class="specialites__slider"></div>
     }
 
     get slides() {
@@ -32,7 +31,6 @@ export class Slider {
 
             const part = document.createElement("div");
             part.className = "container_inner-part";
-            // inner.append(part);
 
             const imgBlock = document.createElement("div");
             imgBlock.className = slide.direction === 'left' ? "img-block after_left" : "img-block after_right";
@@ -44,7 +42,6 @@ export class Slider {
 
             const partText = document.createElement("div");
             partText.className = "container_inner-part text_center";
-            // inner.append(partText);
 
             const h2 = document.createElement("h2");
             h2.className = "second_title";
@@ -96,7 +93,7 @@ export class Slider {
         this.slider.append(dots);
     }
 
-    addButton () {
+    addButton() {
         const slideControl = document.createElement("div");
         slideControl.className = "specialites__control";
         this.slider.append(slideControl);
@@ -128,8 +125,6 @@ export class Slider {
         }
 
 
-
-
         document.addEventListener("DOMContentLoaded", init(this.currentSlide))
         const next = () => {
             this.currentSlide >= slides.length - 1 ? this.currentSlide = 0 : this.currentSlide++
@@ -156,7 +151,5 @@ export class Slider {
                 this.currentSlide = i
             })
         })
-
-
     }
 }

@@ -1,6 +1,4 @@
 
-
-
 // Initialize and add the google map
 function initMap() {
     // The location of Uluru
