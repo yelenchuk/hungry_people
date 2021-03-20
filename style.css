@@ -494,7 +494,19 @@ body {
 
 .menu-list__items li{
   min-width: 33.33%;
+  display: flex;
+  flex-direction: column;
 }
+
+.menu-list__items-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-list__items-inner p:last-child {
+  padding-right: 10px;
+}
+
 
 .menu-list__items--text-first {
   font-family: "Bunny Regular";

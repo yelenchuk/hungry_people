@@ -43,7 +43,7 @@ const menuTitle =
     }
 ;
 
-const menuType = ["soupe", "pizza", "pasta", "desert", "wine", "beer", "drinks"];
+const menuType = ["all", "soupe", "pizza", "pasta", "desert", "wine", "beer", "drinks"];
 
 const menuData = [
     {
