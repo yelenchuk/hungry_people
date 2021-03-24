@@ -698,3 +698,57 @@ body {
   line-height: 0.75rem;
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .container_inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .first_title {
+    font-size: 3rem;
+    word-wrap: normal;
+  }
+
+  .second_title {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+
+  .thirt_title {
+    letter-spacing: 0.25rem;
+  }
+
+  .section__text--title {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .section__text--description {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+
+  .img-block img {
+    width: 275px;
+    height: 275px;
+  }
+
+  .img-block::after {
+    width: 113px;
+    height: 113px;
+    background-size: 113px;
+  }
+
+  .after_right::after {
+    right: -12px;
+  }
+
+  .after_left::after {
+    left: -12px;
+  }
+}

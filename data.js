@@ -54,7 +54,46 @@ const menuData = [
         currency: "USD"
 
     },
+    {
+        type: "SOUPE",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
 
+    },
+    {
+        type: "SOUPE",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
+    {
+        type: "SOUPE",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
+    {
+        type: "SOUPE",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
+    {
+        type: "SOUPE",
+        title: "SOUPE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
     {
         type: "PIZZA",
         title: "PIZZA QUATRO STAGIONI",
@@ -64,6 +103,86 @@ const menuData = [
 
     },
 
+    {
+        type: "PIZZA",
+        title: "PIZZA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 55.68,
+        currency: "USD"
+
+    },
+    {
+        type: "PIZZA",
+        title: "PIZZA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 55.68,
+        currency: "USD"
+
+    },
+    {
+        type: "PIZZA",
+        title: "PIZZA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 55.68,
+        currency: "USD"
+
+    },
+    {
+        type: "PIZZA",
+        title: "PIZZA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 55.68,
+        currency: "USD"
+
+    },
+    {
+        type: "PIZZA",
+        title: "PIZZA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 55.68,
+        currency: "USD"
+
+    },
+     {
+        type: "PASTA",
+        title: "PASTA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
+    {
+        type: "PASTA",
+        title: "PASTA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
+    {
+        type: "PASTA",
+        title: "PASTA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
+    {
+        type: "PASTA",
+        title: "PASTA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
+    {
+        type: "PASTA",
+        title: "PASTA QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 75.68,
+        currency: "USD"
+
+    },
     {
         type: "PASTA",
         title: "PASTA QUATRO STAGIONI",
@@ -81,7 +200,89 @@ const menuData = [
         currency: "USD"
 
     },
+    {
+        type: "DESERT",
+        title: "DESERT QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 45.68,
+        currency: "USD"
 
+    },
+    {
+        type: "DESERT",
+        title: "DESERT QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 45.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "DESERT",
+        title: "DESERT QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 45.68,
+        currency: "USD"
+
+    },
+    {
+        type: "DESERT",
+        title: "DESERT QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 45.68,
+        currency: "USD"
+
+    },
+    {
+        type: "DESERT",
+        title: "DESERT QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 45.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "WINE",
+        title: "WINE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 35.68,
+        currency: "USD"
+
+    },
+    {
+        type: "WINE",
+        title: "WINE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 35.68,
+        currency: "USD"
+
+    },
+    {
+        type: "WINE",
+        title: "WINE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 35.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "WINE",
+        title: "WINE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 35.68,
+        currency: "USD"
+
+    },
+    {
+        type: "WINE",
+        title: "WINE QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 35.68,
+        currency: "USD"
+
+    },
     {
         type: "WINE",
         title: "WINE QUATRO STAGIONI",
@@ -99,6 +300,47 @@ const menuData = [
         currency: "USD"
 
     },
+    {
+        type: "BEER",
+        title: "BEER QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 25.68,
+        currency: "USD"
+
+    },
+    {
+        type: "BEER",
+        title: "BEER QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 25.68,
+        currency: "USD"
+
+    },
+
+    {
+        type: "BEER",
+        title: "BEER QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 25.68,
+        currency: "USD"
+
+    },
+    {
+        type: "BEER",
+        title: "BEER QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 25.68,
+        currency: "USD"
+
+    },
+    {
+        type: "BEER",
+        title: "BEER QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 25.68,
+        currency: "USD"
+
+    },
 
     {
         type: "DRINKS",
@@ -106,6 +348,43 @@ const menuData = [
         description: "Integer ullamcorper neque eu purus euismod",
         price: 15.68,
         currency: "USD"
-    }
+    },
 
+    {
+        type: "DRINKS",
+        title: "DRINKS QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 15.68,
+        currency: "USD"
+    },
+    {
+        type: "DRINKS",
+        title: "DRINKS QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 15.68,
+        currency: "USD"
+    },
+
+    {
+        type: "DRINKS",
+        title: "DRINKS QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 15.68,
+        currency: "USD"
+    },
+
+    {
+        type: "DRINKS",
+        title: "DRINKS QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 15.68,
+        currency: "USD"
+    },
+    {
+        type: "DRINKS",
+        title: "DRINKS QUATRO STAGIONI",
+        description: "Integer ullamcorper neque eu purus euismod",
+        price: 15.68,
+        currency: "USD"
+    },
 ]
