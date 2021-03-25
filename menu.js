@@ -17,7 +17,7 @@ export class Menu {
     get menuIteams() {
 
         const innerMenu = document.createElement("div");
-        innerMenu.className = "container_inner--pading-one";
+        innerMenu.className = "container_inner--pading-menu";
 
         const innerMenuPart = document.createElement("div");
         innerMenuPart.className = "text_center";
