@@ -714,7 +714,11 @@ body {
   }
 
   .container_inner--pading-one {
-    padding-top: 10px;
+    padding: 10px 0;
+  }
+
+  .container_inner--pading-top {
+    padding-top: 20px;
   }
 
   .header__navigation {
@@ -761,7 +765,7 @@ body {
 
   .second_title {
     font-size: 1.25rem;
-    line-height: 1.25rem;
+    line-height: 1rem;
   }
 
   .second_title::after {
@@ -771,16 +775,17 @@ body {
 
   .thirt_title {
     letter-spacing: 0.12rem;
+    padding-top: 30px;
   }
 
   .section__text--title {
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    line-height: 0.875rem;
   }
 
   .section__text--description {
     font-size: 0.75rem;
-    line-height: 1.25rem;
+    line-height: 0.875rem;
   }
 
   .img-block img {
@@ -802,6 +807,33 @@ body {
     left: -12px;
   }
 
+  .book-form__inner {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .book-form__inner input {
+    text-indent: 10px;
+    width: 100%;
+    padding: 0;
+    height: 30px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .book-form__inner .book-form__input-wrapper {
+    width: 100%;
+  }
+
+  .book-form__inner .book-form__input-wrapper:nth-child(2n+1) {
+    margin-right: 0px;
+  }
+
+  .yellow-button {
+    height: 40px;
+  }
+
   .menu-list {
     flex-direction: column;
     align-items: center;
@@ -819,7 +851,7 @@ body {
   }
 
   .container_inner--pading-menu {
-    padding: 30px 0 0 0;
+    padding: 15px 0 0 0;
   }
 
   .menu-list__items--text-first {
@@ -859,7 +891,9 @@ body {
   }
 
   .text_address {
-    line-height: 2rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
   }
 
   .contact-form__inner--first {
@@ -890,5 +924,14 @@ body {
 
   .container_inner--adress {
     flex-direction: column;
+  }
+
+  #signup {
+    padding: 20px 0;
+  }
+
+  .signup__text {
+    font-size: 0.5rem;
+    line-height: 0.5rem;
   }
 }
