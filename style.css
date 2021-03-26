@@ -926,6 +926,10 @@ body {
     flex-direction: column;
   }
 
+    #map {
+        height: 300px;
+    }
+
   #signup {
     padding: 20px 0;
   }
