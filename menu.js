@@ -2,6 +2,9 @@ export class Menu {
     constructor(menuSelector = "") {
 
     this.menuSelector = menuSelector;
+
+    this.isHamburgerMenu = false;
+
     this.init();
 }
 
