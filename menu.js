@@ -90,8 +90,8 @@ export class Menu {
         const dishIteams = document.querySelectorAll(".menu-list__dish");
         dishIteams.forEach(dish => {
             dish.style.display = "block";
-            if (e.originalTarget.innerText !== "ALL") {
-                if (dish.getAttribute('menu-list__dish') !== e.originalTarget.innerText) {
+            if (e.target.innerText !== "ALL") {
+                if (dish.getAttribute('menu-list__dish') !== e.target.innerText) {
                     dish.style.display = "none";
                 }
             }
